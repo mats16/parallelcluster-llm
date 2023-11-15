@@ -1,0 +1,20 @@
+Build:
+  InstanceType: g5.xlarge
+
+  # Deep Learning AMI GPU PyTorch 2.1.0 (Ubuntu 20.04) 20231103 / us-west-2 / Resulted: 72 GB
+  ParentImage: ami-0c95e55075f3c7f51
+
+  Components:
+    - Type: script
+      Value: https://raw.githubusercontent.com/mats16/parallelcluster-llm/main/scripts/install_heron.sh
+
+  UpdateOsPackages:
+    Enabled: false
+Image:
+  RootVolume:
+    Encrypted: false
+
+    # https://docs.aws.amazon.com/parallelcluster/latest/ug/build-Image-v3.html#yaml-build-image-Image-RootVolume-Size
+    # Size (Optional, Integer)
+    #   Specifies the size of the root volume for the image, in GiB. The default size is the size of the ParentImage plus 27 GiB.
+    #Size: xxx
