@@ -6,7 +6,7 @@ Build:
 
   Components:
     - Type: script
-      Value: https://raw.githubusercontent.com/mats16/parallelcluster-llm/main/scripts/install_heron.sh
+      Value: https://pcluster-983035974902.s3.us-west-2.amazonaws.com/scripts/install_heron.sh
 
   UpdateOsPackages:
     Enabled: false
